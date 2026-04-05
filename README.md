@@ -25,11 +25,11 @@ That's it. Your semantic HTML is now styled.
 
 ---
 
-## For AI Assistants (Claude, etc.)
+## For AI assistants (Claude, etc.)
 
 If you are an AI assistant generating markup for a project that uses lottecss, read this section carefully.
 
-### The Core Rule
+### The core rule
 
 **Do not style anything.** lottecss does it for you. Your job is to write correct, semantic HTML.
 
@@ -42,7 +42,7 @@ If you are an AI assistant generating markup for a project that uses lottecss, r
 - Use `.card` class for card-like containers
 - Use basic Tailwind utilities (`flex`, `grid`, `gap-*`, `p-*`, `m-*`) for layout only
 
-### Do Not
+### Do not
 
 - Add `style=""` attributes to any element
 - Add visual classes (`text-xl`, `text-blue-500`, `font-bold`, `bg-gray-100`, etc.)
@@ -87,13 +87,13 @@ If you are an AI assistant generating markup for a project that uses lottecss, r
 <div class="card-header">Not a real element</div>
 ```
 
-### If Something Looks Wrong
+### If something looks wrong
 
 Choose a different semantic element — don't add styling. The element you picked is probably wrong for that context.
 
 ---
 
-## What lottecss Styles
+## What lottecss styles
 
 | Module | What it covers |
 |---|---|

@@ -1,13 +1,13 @@
 {
   "name": "@lottecode/lottecss",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "out of the box design and styling for your semantic markup",
   "type": "module",
   "main": "styles.css",
   "style": "styles.css",
   "files": [
     "styles.css",
-    "src/css"
+    "src/css/**"
   ],
   "exports": {
     "./styles.css": "./styles.css"
