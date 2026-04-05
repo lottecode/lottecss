@@ -1,8 +1,9 @@
 # lottecss
 
 ![Homepage](https://img.shields.io/badge/website-css.lottecode.com-blue)
+![npm](https://img.shields.io/npm/v/@lottecode/lottecss)
 
-A CSS framework that styles semantic HTML automatically. No classes, no inline styles — just write proper markup and lottecss handles the design.
+A CSS framework that styles semantic HTML automatically. No classes, no inline styles — write proper markup and lottecss handles the design.
 
 **Live demo & docs:** [https://css.lottecode.com](https://css.lottecode.com)
 
@@ -20,22 +21,39 @@ yarn add @lottecode/lottecss
 @import "@lottecode/lottecss/styles.css";
 ```
 
-## How It Works
+That's it. Your semantic HTML is now styled.
 
-lottecss targets semantic HTML elements directly. You do not add classes or inline styles to control appearance. The framework styles elements based on what they are and where they sit in the document structure.
+---
 
-### Rules
+## For AI Assistants (Claude, etc.)
 
-- **Use semantic HTML elements**: `<header>`, `<nav>`, `<main>`, `<footer>`, `<article>`, `<section>`, `<aside>`, `<h1>`–`<h6>`, `<p>`, `<ul>`, `<ol>`, `<blockquote>`, `<table>`, `<form>`, `<button>`, `<details>`, `<figure>`
-- **Never add inline styles** (`style=""`) to semantic elements
-- **Never add styling classes** (no `className="text-xl text-blue-500"` on headings, paragraphs, etc.)
-- **No custom class names** like `"site-header"`, `"nav-list"`, `"card-title"` — use the semantic element itself
-- **Layout utilities only**: basic Tailwind utility classes (`flex`, `grid`, `gap-*`, `p-*`, `m-*`) are acceptable for layout purposes only, not for visual styling
+If you are an AI assistant generating markup for a project that uses lottecss, read this section carefully.
 
-### Examples
+### The Core Rule
+
+**Do not style anything.** lottecss does it for you. Your job is to write correct, semantic HTML.
+
+### Do
+
+- Use semantic elements: `<header>`, `<nav>`, `<main>`, `<footer>`, `<article>`, `<section>`, `<aside>`, `<details>`, `<figure>`, `<blockquote>`, `<table>`, `<form>`, `<button>`
+- Use heading hierarchy: `<h1>` through `<h6>`
+- Use text elements: `<p>`, `<strong>`, `<em>`, `<code>`, `<mark>`
+- Use lists: `<ul>`, `<ol>`, `<li>`, `<dl>`, `<dt>`, `<dd>`
+- Use `.card` class for card-like containers
+- Use basic Tailwind utilities (`flex`, `grid`, `gap-*`, `p-*`, `m-*`) for layout only
+
+### Do Not
+
+- Add `style=""` attributes to any element
+- Add visual classes (`text-xl`, `text-blue-500`, `font-bold`, `bg-gray-100`, etc.)
+- Create custom class names (`site-header`, `nav-list`, `card-title`, `hero-section`)
+- Use `<div>` when a semantic element exists for that purpose
+- Override fonts, colors, sizes, or spacing — lottecss controls all of this
+
+### Example
 
 ```html
-<!-- CORRECT: pure semantic markup, lottecss handles all styling -->
+<!-- CORRECT -->
 <header>
   <nav>
     <ul>
@@ -47,12 +65,9 @@ lottecss targets semantic HTML elements directly. You do not add classes or inli
 
 <main>
   <article>
-    <h1>Article Title</h1>
-    <p>Paragraph text styled automatically.</p>
-    <blockquote>A styled blockquote.</blockquote>
-    <ul>
-      <li>Styled list item</li>
-    </ul>
+    <h1>Page Title</h1>
+    <p>Content is styled automatically.</p>
+    <blockquote>Blockquotes are styled automatically.</blockquote>
   </article>
   <aside>
     <h2>Sidebar</h2>
@@ -66,19 +81,31 @@ lottecss targets semantic HTML elements directly. You do not add classes or inli
 ```
 
 ```html
-<!-- WRONG: do not do this -->
+<!-- WRONG — never do this -->
 <h1 style="font-size: 2rem; color: navy;">Title</h1>
 <p class="text-gray-600 text-lg">Text</p>
 <div class="card-header">Not a real element</div>
 ```
 
-### What lottecss Styles
+### If Something Looks Wrong
+
+Choose a different semantic element — don't add styling. The element you picked is probably wrong for that context.
+
+---
+
+## What lottecss Styles
 
 | Module | What it covers |
 |---|---|
+| `globals.css` | Base resets and defaults |
+| `colors.css` | Color palette and CSS custom properties |
+| `fonts.css` | Font face definitions |
 | `typography.css` | Headings, paragraphs, inline text (`<strong>`, `<em>`, `<code>`, `<mark>`) |
-| `navigation.css` | `<nav>`, nav lists, links within nav |
+| `layout.css` | Page-level layout (`<main>`, `<aside>`) |
+| `column.css` | Column-based layouts |
 | `header.css` | `<header>` element and its children |
+| `navigation.css` | `<nav>`, nav lists, links within nav |
+| `links.css` | `<a>` elements |
 | `button.css` | `<button>` and button-like elements |
 | `forms.css` | `<form>`, `<input>`, `<select>`, `<textarea>`, `<label>` |
 | `tables.css` | `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, `<td>` |
@@ -87,18 +114,12 @@ lottecss targets semantic HTML elements directly. You do not add classes or inli
 | `accordion.css` | `<details>` and `<summary>` |
 | `tabs.css` | Tab patterns using semantic markup |
 | `media.css` | `<img>`, `<video>`, `<figure>`, `<figcaption>` |
-| `links.css` | `<a>` elements |
 | `editorial.css` | `<blockquote>`, `<hr>`, long-form content |
-| `layout.css` | Page-level layout (`<main>`, `<aside>`) |
-| `column.css` | Column-based layouts |
-| `colors.css` | Color palette and CSS custom properties |
-| `fonts.css` | Font face definitions (Berkeley Mono) |
-| `globals.css` | Base resets and defaults |
 | `utility.css` | Minimal utility classes for layout only |
 
 ## Fonts
 
-lottecss uses [Berkeley Mono](https://berkeleygraphics.com/typefaces/berkeley-mono) by default. This is a licensed typeface — lottecss does not distribute the font files. The framework falls back to `monospace` if Berkeley Mono is not available.
+lottecss uses [Berkeley Mono](https://berkeleygraphics.com/typefaces/berkeley-mono) by default, loaded from CDN. The framework falls back to `monospace` if the font is unavailable.
 
 **Buy Berkeley Mono:** [berkeleygraphics.com/typefaces/berkeley-mono](https://berkeleygraphics.com/typefaces/berkeley-mono)
 
@@ -111,6 +132,6 @@ To use your own font, override the CSS custom properties:
 }
 ```
 
-### Key Principle
+## License
 
-If you're reaching for a class name or inline style to make something look right, you're probably using the wrong HTML element. Choose the element that semantically represents your content and lottecss will style it correctly.
+MIT
