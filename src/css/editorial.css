@@ -1,0 +1,12 @@
+.editorial p,
+.editorial h1,
+.editorial h2,
+.editorial h3,
+.editorial h4,
+.editorial h5,
+.editorial h6,
+.editorial ul,
+.editorial ol,
+.editorial blockquote {
+    max-width: 400px;
+}

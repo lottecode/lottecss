@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Berkeley Mono", monospace;
+  font-size: 16px;
+  background-color: var(--color-background);
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: var(--color-accent);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.card-bevel {
+  position: relative;
+}
+
+.card-bevel::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  opacity: 1;
+}
+
+/* Carousel animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-content {
+  animation: scroll 60s linear infinite;
+  will-change: transform;
+}
+
+.ticker-item {
+  padding: 0 1rem;
+}
+
+/* Tarot card flip */
+.tarot-card-flip {
+  perspective: 800px;
+}
+
+.tarot-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.tarot-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.tarot-card-front,
+.tarot-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+
+.tarot-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Thin scrollbar */
+.thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+}
+
+p,
+span,
+a,
+cite,
+q,
+em,
+strong,
+abbr,
+time,
+mark,
+address,
+ul,
+ol,
+li,
+dl,
+dd,
+dt,
+div,
+article,
+section,
+aside,
+blockquote,
+figure,
+figcaption,
+main,
+header,
+footer,
+nav,
+details,
+summary,
+label,
+legend,
+fieldset,
+input,
+select,
+option,
+button,
+textarea,
+caption,
+th,
+td,
+samp,
+kbd,
+var {
+  font-size: 0.75rem;
+}

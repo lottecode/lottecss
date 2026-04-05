@@ -1,0 +1,53 @@
+body {
+  & button,
+  & input[type="button"],
+  & button[type="submit"] {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    padding: 0.55rem 1.5rem;
+    line-height: 1.5;
+    border-radius: 2rem;
+    transition:
+      color 0.15s ease-in-out,
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+    cursor: pointer;
+  }
+
+  & button,
+  & input[type="button"],
+  & button[type="submit"] {
+    color: var(--color-background);
+    background-color: var(--color-foreground);
+  }
+
+  & button:hover,
+  & input[type="button"]:hover,
+  & button[type="submit"]:hover {
+    color: var(--color-foreground);
+    background-color: var(--color-highlight);
+  }
+
+  /* Clerk button overrides */
+  & .cl-formButtonPrimary,
+  & .cl-formButtonPrimary span {
+    color: white !important;
+    border-radius: 2rem !important;
+  }
+
+  & [class*="cl-"] * {
+    margin-bottom: 0 !important;
+  }
+
+  /* Disabled state */
+
+  & button:disabled,
+  & input:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,124 @@
+/* Colors Styles */
+
+:root {
+  --color-background: #fffcf1;
+  --color-foreground: #121212;
+  --color-surface: #fff;
+  --color-border: #121212;
+  --color-accent: #0c0;
+  --color-highlight: #fceaf5;
+  --color-info: #79bce8;
+  --color-success: #59c07d;
+  --color-warning: #ffd24d;
+  --color-error: #f26c6c;
+  --color-sage: #c8d9d1;
+}
+
+.theme-dark {
+  --color-background: #121212;
+  --color-foreground: #f5f5f5;
+  --color-surface: #130f40;
+  --color-border: #e0bcd3;
+  --color-accent: #fceaf5;
+  --color-highlight: #94e59c;
+  --color-info: #3d87b5;
+  --color-success: #2e8c51;
+  --color-warning: #d9a305;
+  --color-error: #c13d3d;
+  --color-sage: #c8d9d1;
+}
+
+/* Opacity/Transparency */
+.opacity-100 {
+  opacity: 1;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-40 {
+  opacity: 0.4;
+}
+
+.opacity-20 {
+  opacity: 0.2;
+}
+
+/* Background Colors */
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.bg-foreground {
+  background-color: var(--color-foreground);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.bg-border {
+  background-color: var(--color-border);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.bg-info {
+  background-color: var(--color-info);
+}
+
+.bg-success {
+  background-color: var(--color-success);
+}
+
+.bg-warning {
+  background-color: var(--color-warning);
+}
+
+.bg-error {
+  background-color: var(--color-error);
+}
+
+/* Text Colors */
+.text-background {
+  color: var(--color-background);
+}
+
+.text-foreground {
+  color: var(--color-foreground);
+}
+
+.text-surface {
+  color: var(--color-surface);
+}
+
+.text-border {
+  color: var(--color-border);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-info {
+  color: var(--color-info);
+}
+
+.text-success {
+  color: var(--color-success);
+}
+
+.text-warning {
+  color: var(--color-warning);
+}
+
+.text-error {
+  color: var(--color-error);
+}

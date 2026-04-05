@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@import "./layout.css";
+@import "./column.css";
+@import "./card.css";
+@import "./colors.css";
+@import "./fonts.css";
+@import "./typography.css";
+@import "./navigation.css";
+@import "./header.css";
+@import "./lists.css";
+@import "./tables.css";
+@import "./forms.css";
+@import "./links.css";
+@import "./media.css";
+@import "./tabs.css";
+@import "./accordion.css";
+@import "./button.css";
+@import "./utility.css";
+@import "./globals.css";
