@@ -3,14 +3,18 @@ body {
   & input[type="button"],
   & button[type="submit"] {
     display: inline-block;
+    font-family: inherit;
     font-weight: 400;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
     user-select: none;
-    padding: 0.55rem 1.5rem;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
     line-height: 1.5;
-    border-radius: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0;
     transition:
       color 0.15s ease-in-out,
       background-color 0.15s ease-in-out,
@@ -30,17 +34,6 @@ body {
   & button[type="submit"]:hover {
     color: var(--color-foreground);
     background-color: var(--color-highlight);
-  }
-
-  /* Clerk button overrides */
-  & .cl-formButtonPrimary,
-  & .cl-formButtonPrimary span {
-    color: white !important;
-    border-radius: 2rem !important;
-  }
-
-  & [class*="cl-"] * {
-    margin-bottom: 0 !important;
   }
 
   /* Disabled state */

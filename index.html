@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LotteCSS Test Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>LotteCSS Component Showcase</h1>
+
+    <section>
+      <h2>Buttons</h2>
+      <p>Default buttons styled by element type:</p>
+      <div>
+        <button>Default Button</button>
+        <input type="button" value="Input Button">
+        <button type="submit">Submit Button</button>
+      </div>
+      <div>
+        <button disabled>Disabled Button</button>
+        <input type="button" value="Disabled Input" disabled>
+      </div>
+    </section>
+
+    <section>
+      <h2>Text Inputs</h2>
+      <form>
+        <div>
+          <label for="text-input">Text</label>
+          <input type="text" id="text-input" placeholder="Enter text">
+        </div>
+        <div>
+          <label for="email-input">Email</label>
+          <input type="email" id="email-input" placeholder="you@example.com">
+        </div>
+        <div>
+          <label for="password-input">Password</label>
+          <input type="password" id="password-input" placeholder="Password">
+        </div>
+        <div>
+          <label for="number-input">Number</label>
+          <input type="number" id="number-input" placeholder="0">
+        </div>
+        <div>
+          <label for="tel-input">Phone</label>
+          <input type="tel" id="tel-input" placeholder="+1 (555) 000-0000">
+        </div>
+        <div>
+          <label for="url-input">URL</label>
+          <input type="url" id="url-input" placeholder="https://example.com">
+        </div>
+        <div>
+          <label for="search-input">Search</label>
+          <input type="search" id="search-input" placeholder="Search...">
+        </div>
+        <div>
+          <label for="disabled-input">Disabled</label>
+          <input type="text" id="disabled-input" value="Cannot edit" disabled>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Validation States</h2>
+      <form>
+        <div>
+          <label for="valid-input">Valid input</label>
+          <input type="text" id="valid-input" class="is-valid" value="Looks good">
+        </div>
+        <div>
+          <label for="invalid-input">Invalid input</label>
+          <input type="text" id="invalid-input" class="is-invalid" value="Something is wrong">
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Other Input Types</h2>
+      <form>
+        <div>
+          <label for="date-input">Date</label>
+          <input type="date" id="date-input">
+        </div>
+        <div>
+          <label for="time-input">Time</label>
+          <input type="time" id="time-input">
+        </div>
+        <div>
+          <label for="datetime-input">Date &amp; Time</label>
+          <input type="datetime-local" id="datetime-input">
+        </div>
+        <div>
+          <label for="color-input">Color</label>
+          <input type="color" id="color-input" value="#0c0c0c">
+        </div>
+        <div>
+          <label for="range-input">Range</label>
+          <input type="range" id="range-input" min="0" max="100" value="50">
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Checkboxes &amp; Radios</h2>
+      <form>
+        <div>
+          <label><input type="checkbox"> Option A</label>
+        </div>
+        <div>
+          <label><input type="checkbox" checked> Option B (checked)</label>
+        </div>
+        <div>
+          <label><input type="checkbox" disabled> Option C (disabled)</label>
+        </div>
+        <div>
+          <label><input type="radio" name="radio-group" checked> Radio 1</label>
+        </div>
+        <div>
+          <label><input type="radio" name="radio-group"> Radio 2</label>
+        </div>
+        <div>
+          <label><input type="radio" name="radio-group" disabled> Radio 3 (disabled)</label>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Select &amp; Textarea</h2>
+      <form>
+        <div>
+          <label for="select-input">Select</label>
+          <select id="select-input">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+        </div>
+        <div>
+          <label for="multi-select">Multiple Select</label>
+          <select id="multi-select" multiple>
+            <option>Alpha</option>
+            <option>Beta</option>
+            <option>Gamma</option>
+            <option>Delta</option>
+          </select>
+        </div>
+        <div>
+          <label for="textarea-input">Textarea</label>
+          <textarea id="textarea-input" rows="4" placeholder="Write something..."></textarea>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Fieldsets</h2>
+      <form>
+        <fieldset>
+          <legend>Account Details</legend>
+          <div>
+            <label for="fs-name">Name</label>
+            <input type="text" id="fs-name" placeholder="Full name">
+          </div>
+          <div>
+            <label for="fs-email">Email</label>
+            <input type="email" id="fs-email" placeholder="you@example.com">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          <div>
+            <label><input type="checkbox"> Receive newsletter</label>
+          </div>
+          <div>
+            <label><input type="checkbox"> Enable notifications</label>
+          </div>
+          <div>
+            <label for="fs-theme">Theme</label>
+            <select id="fs-theme">
+              <option>Light</option>
+              <option>Dark</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <div>
+          <button type="submit">Save Settings</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Complete Form with Validation</h2>
+      <form>
+        <fieldset>
+          <legend>Contact Form</legend>
+          <div>
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" class="is-valid" value="Charlotte">
+          </div>
+          <div>
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" class="is-invalid" value="not-an-email">
+          </div>
+          <div>
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" rows="4" placeholder="Your message..."></textarea>
+          </div>
+          <div>
+            <button type="submit">Send Message</button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
