@@ -8,11 +8,9 @@ body {
   /* Fieldset and Legend */
 
   & fieldset {
-    /*margin: 0 0 1.5rem 0;*/
-    /*padding: 1rem;*/
-    /*border: 1px solid var(--color-border);*/
-    /*border-radius: 4px;*/
-    /*background-color: var(--color-surface);*/
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--color-border);
   }
 
   & fieldset + fieldset {
