@@ -1,10 +1,10 @@
 # lottecss
 
-![Homepage](https://img.shields.io/badge/website-lottecss.com-blue)
+![Homepage](https://img.shields.io/badge/website-css.lottecode.com-blue)
 
 A CSS framework that styles semantic HTML automatically. No classes, no inline styles — just write proper markup and lottecss handles the design.
 
-**Live demo & docs:** [https://lottecss.com](https://lottecss.com)
+**Live demo & docs:** [https://css.lottecode.com](https://css.lottecode.com)
 
 ---
 
