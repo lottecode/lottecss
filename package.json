@@ -1,5 +1,5 @@
 {
-  "name": "lottecss",
+  "name": "@lottecode/lottecss",
   "version": "0.0.1",
   "description": "out of the box design and styling for your semantic markup",
   "type": "module",
@@ -11,6 +11,13 @@
   ],
   "exports": {
     "./styles.css": "./styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lottecode/lottecss.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "license": "MIT",
   "packageManager": "yarn@4.3.1",
