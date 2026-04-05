@@ -93,7 +93,7 @@ lottecss targets semantic HTML elements directly. You do not add classes or inli
 | `forms.css` | `<form>`, `<input>`, `<select>`, `<textarea>`, `<label>` |
 | `tables.css` | `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, `<td>` |
 | `lists.css` | `<ul>`, `<ol>`, `<li>`, `<dl>`, `<dt>`, `<dd>` |
-| `card.css` | `<article>` and `<section>` as card-like containers |
+| `card.css` | `.card` class for card-like containers |
 | `accordion.css` | `<details>` and `<summary>` |
 | `tabs.css` | Tab patterns using semantic markup |
 | `media.css` | `<img>`, `<video>`, `<figure>`, `<figcaption>` |
