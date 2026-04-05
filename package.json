@@ -17,7 +17,8 @@
     "url": "https://github.com/lottecode/lottecss.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "license": "MIT",
   "packageManager": "yarn@4.3.1",

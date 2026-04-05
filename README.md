@@ -10,16 +10,6 @@ A CSS framework that styles semantic HTML automatically. No classes, no inline s
 
 ## Installation
 
-Add the lottecode registry to your project's `.yarnrc.yml`:
-
-```yaml
-npmScopes:
-  lottecode:
-    npmRegistryServer: "https://npm.pkg.github.com"
-```
-
-Then install:
-
 ```bash
 yarn add @lottecode/lottecss
 ```
