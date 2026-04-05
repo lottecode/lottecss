@@ -106,6 +106,19 @@ lottecss targets semantic HTML elements directly. You do not add classes or inli
 | `globals.css` | Base resets and defaults |
 | `utility.css` | Minimal utility classes for layout only |
 
+## Fonts
+
+lottecss uses [Berkeley Mono](https://berkeleygraphics.com/typefaces/berkeley-mono) by default, loaded from `assets.lottecode.com`. The system falls back to `monospace` if the font is unavailable.
+
+To use your own font, override the CSS custom properties:
+
+```css
+:root {
+  --font-family-sans: "Your Font", sans-serif;
+  --font-family-mono: "Your Mono Font", monospace;
+}
+```
+
 ### Key Principle
 
 If you're reaching for a class name or inline style to make something look right, you're probably using the wrong HTML element. Choose the element that semantically represents your content and lottecss will style it correctly.
