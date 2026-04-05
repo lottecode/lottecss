@@ -108,7 +108,9 @@ lottecss targets semantic HTML elements directly. You do not add classes or inli
 
 ## Fonts
 
-lottecss uses [Berkeley Mono](https://berkeleygraphics.com/typefaces/berkeley-mono) by default, loaded from `assets.lottecode.com`. The system falls back to `monospace` if the font is unavailable.
+lottecss uses [Berkeley Mono](https://berkeleygraphics.com/typefaces/berkeley-mono) by default. This is a licensed typeface — lottecss does not distribute the font files. The framework falls back to `monospace` if Berkeley Mono is not available.
+
+**Buy Berkeley Mono:** [berkeleygraphics.com/typefaces/berkeley-mono](https://berkeleygraphics.com/typefaces/berkeley-mono)
 
 To use your own font, override the CSS custom properties:
 
