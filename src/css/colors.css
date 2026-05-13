@@ -1,31 +1,48 @@
 /* Colors Styles */
 
 :root {
-  --color-background: #fffcf1;
-  --color-foreground: #121212;
-  --color-surface: #fff;
-  --color-border: #121212;
-  --color-accent: #0c0;
-  --color-highlight: #fceaf5;
-  --color-info: #79bce8;
-  --color-success: #59c07d;
-  --color-warning: #ffd24d;
-  --color-error: #f26c6c;
+  /* Brand primitives */
+  --color-white: #ffffff;
+  --color-black: #121212;
+  --color-red: #f26c6c;
+  --color-orange: #f3a06b;
+  --color-yellow: #ffd24d;
+  --color-green: #59c07d;
+  --color-blue: #79bce8;
+  --color-pink: #fceaf5;
   --color-sage: #c8d9d1;
+
+  /* Base semantic */
+  --color-background: #fffcf1;
+  --color-foreground: var(--color-black);
+  --color-surface: var(--color-white);
+  --color-border: var(--color-black);
+
+  /* Accent semantic */
+  --color-accent: #0c0;
+  --color-highlight: var(--color-pink);
+  --color-info: var(--color-blue);
+  --color-success: var(--color-green);
+  --color-warning: var(--color-yellow);
+  --color-error: var(--color-red);
 }
 
 .theme-dark {
-  --color-background: #121212;
+  /* Brand primitive shifts for dark */
+  --color-red: #c13d3d;
+  --color-yellow: #d9a305;
+  --color-green: #2e8c51;
+  --color-blue: #3d87b5;
+
+  /* Base semantic */
+  --color-background: var(--color-black);
   --color-foreground: #f5f5f5;
   --color-surface: #130f40;
   --color-border: #e0bcd3;
-  --color-accent: #fceaf5;
+
+  /* Accent semantic */
+  --color-accent: var(--color-pink);
   --color-highlight: #94e59c;
-  --color-info: #3d87b5;
-  --color-success: #2e8c51;
-  --color-warning: #d9a305;
-  --color-error: #c13d3d;
-  --color-sage: #c8d9d1;
 }
 
 /* Opacity/Transparency */
@@ -49,7 +66,7 @@
   opacity: 0.2;
 }
 
-/* Background Colors */
+/* Background Colors — semantic */
 .bg-background {
   background-color: var(--color-background);
 }
@@ -70,6 +87,10 @@
   background-color: var(--color-accent);
 }
 
+.bg-highlight {
+  background-color: var(--color-highlight);
+}
+
 .bg-info {
   background-color: var(--color-info);
 }
@@ -86,7 +107,44 @@
   background-color: var(--color-error);
 }
 
-/* Text Colors */
+/* Background Colors — brand primitives */
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-black {
+  background-color: var(--color-black);
+}
+
+.bg-red {
+  background-color: var(--color-red);
+}
+
+.bg-orange {
+  background-color: var(--color-orange);
+}
+
+.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
+.bg-green {
+  background-color: var(--color-green);
+}
+
+.bg-blue {
+  background-color: var(--color-blue);
+}
+
+.bg-pink {
+  background-color: var(--color-pink);
+}
+
+.bg-sage {
+  background-color: var(--color-sage);
+}
+
+/* Text Colors — semantic */
 .text-background {
   color: var(--color-background);
 }
@@ -107,6 +165,10 @@
   color: var(--color-accent);
 }
 
+.text-highlight {
+  color: var(--color-highlight);
+}
+
 .text-info {
   color: var(--color-info);
 }
@@ -121,4 +183,41 @@
 
 .text-error {
   color: var(--color-error);
+}
+
+/* Text Colors — brand primitives */
+.text-white {
+  color: var(--color-white);
+}
+
+.text-black {
+  color: var(--color-black);
+}
+
+.text-red {
+  color: var(--color-red);
+}
+
+.text-orange {
+  color: var(--color-orange);
+}
+
+.text-yellow {
+  color: var(--color-yellow);
+}
+
+.text-green {
+  color: var(--color-green);
+}
+
+.text-blue {
+  color: var(--color-blue);
+}
+
+.text-pink {
+  color: var(--color-pink);
+}
+
+.text-sage {
+  color: var(--color-sage);
 }
